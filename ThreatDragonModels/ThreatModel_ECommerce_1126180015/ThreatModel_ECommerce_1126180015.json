@@ -73,56 +73,6 @@
             "target": {
               "cell": "e40054a0-7dbf-4ef4-81ad-4cf98e2ffc84",
               "port": "cff594e4-43c8-421f-859c-d4c1b4430e3a"
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
             }
           },
           {
@@ -626,110 +576,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "HTTPS Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "HTTPS Request"
-            ],
-            "id": "0f581587-0e44-4b01-ab9a-f552452bf7b7",
-            "source": {
-              "x": 123,
-              "y": 35
-            },
-            "target": {
-              "cell": "65b5d48c-fb9c-4882-ad8c-894b2ccff3f6",
-              "port": "94c5deeb-7e26-431b-9d5f-6a3ca668728d"
-            },
-            "vertices": [
-              {
-                "x": 190,
-                "y": 35
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "SQL Query",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "SQL Query"
-            ],
-            "id": "3786b697-87a6-4c96-bf07-06bb02c58188",
-            "source": {
-              "x": 670,
-              "y": 41
-            },
-            "target": {
-              "cell": "e40054a0-7dbf-4ef4-81ad-4cf98e2ffc84",
-              "port": "58d419c4-e7ad-4758-b808-e9f595421b72"
-            },
-            "vertices": [
-              {
-                "x": 770,
-                "y": 41
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "API Call/JSON",
               "description": "",
               "outOfScope": false,
@@ -761,12 +607,156 @@
                 "y": 37
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "4d93e424-d95c-469c-b54b-ed884afd6695",
+                  "title": "THREAT 1 ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Penyerang memalsukan cookie identitas (Session Hijacking).",
+                  "mitigation": "Terapkan atribut Secure dan HttpOnly pada cookie.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "HTTPS Request"
+            ],
+            "id": "0f581587-0e44-4b01-ab9a-f552452bf7b7",
+            "source": {
+              "x": 123,
+              "y": 35
+            },
+            "target": {
+              "cell": "65b5d48c-fb9c-4882-ad8c-894b2ccff3f6",
+              "port": "94c5deeb-7e26-431b-9d5f-6a3ca668728d"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 35
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SQL Query",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "06b8a690-d8e3-4b07-90e3-06b1764c1f4d",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Penyerang menginjeksikan perintah SQL berbahaya untuk membaca data sensitif secara ilegal.",
+                  "mitigation": "Gunakan Prepared Statements / Parameterized Queries dan lakukan enkripsi data sensitif di database.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "SQL Query"
+            ],
+            "id": "3786b697-87a6-4c96-bf07-06bb02c58188",
+            "source": {
+              "x": 670,
+              "y": 41
+            },
+            "target": {
+              "cell": "e40054a0-7dbf-4ef4-81ad-4cf98e2ffc84",
+              "port": "58d419c4-e7ad-4758-b808-e9f595421b72"
+            },
+            "vertices": [
+              {
+                "x": 770,
+                "y": 41
+              }
+            ]
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 2
   }
 }
